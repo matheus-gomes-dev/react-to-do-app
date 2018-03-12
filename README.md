@@ -1,2 +1,2 @@
-# react-to-do-app
+# To do app - React
 Simple app to practice react, redux and webpack. 
