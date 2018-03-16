@@ -6,3 +6,19 @@
 	text-decoration: line-through;
 	color: #777;
 }
+
+.tableActions{
+	width: 100px;
+}
+
+.tableActions{
+	width: 105px;
+}
+
+td button{
+	height: 30px;
+}
+
+.todoForm {
+	padding-bottom: 80px;
+}
