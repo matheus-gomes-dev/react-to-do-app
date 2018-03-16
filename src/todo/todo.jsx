@@ -1,7 +1,12 @@
 import React, {Component} from 'react'
+import axios from 'axios'
+import config from '../config/config'
+
 import PageHeader from '../template/pageHeader'
 import TodoForm from './todoForm'
 import TodoList from './todoList'
+
+const API_URL = config.API_URL;
 
 export default class Todo extends Component{
 
@@ -18,7 +23,8 @@ export default class Todo extends Component{
 	}
 
 	handleAdd() {
-		console.log(this.state.description)
+		const description = this.state.description
+		axios.post(API_URL, {description}).then(resp => console.log('Added new item!'))
 	}
 
 	render(){
