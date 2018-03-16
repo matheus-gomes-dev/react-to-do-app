@@ -9,12 +9,34 @@ export default props => {
         return list.map(todo => (
         	
             <tr key={todo._id /*each array's element must have an unique key*/}>
-                <td>{todo.description}</td>
+                <td className={todo.done ? 'markedAsDone' : ''}>{todo.description}</td>
                 <td>
+                	<IconButton 
+                    	style='success' 
+                    	icon='check'
+                    	hide={todo.done}
+                    	onClick={
+                    		() => props.handleMarkAsDone(todo) 
+	                    	/*when working with parameteres that are not events, arrow function is a must!*/
+	                    }>
+                    </IconButton>
+                    <IconButton 
+                    	style='warning' 
+                    	icon='undo' 
+                    	hide={!todo.done}
+                    	onClick={
+                    		() => props.handleMarkAsPending(todo) 
+	                    	/*when working with parameteres that are not events, arrow function is a must!*/
+	                    }>
+                    </IconButton>
                     <IconButton 
                     	style='danger' 
                     	icon='trash-o' 
-                    	onClick={() => props.handleRemove(todo)}>
+                    	hide={!todo.done}
+                    	onClick={
+                    		() => props.handleRemove(todo) 
+	                    	/*when working with parameteres that are not events, arrow function is a must!*/
+	                    }>
                     </IconButton>
                 </td>
             </tr>
