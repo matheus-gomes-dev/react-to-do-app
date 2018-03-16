@@ -15,7 +15,14 @@ export default class Todo extends Component{
 		this.state = {description: '', list: []}
 		this.handleAdd = this.handleAdd.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+		this.handleRemove = this.handleRemove.bind(this)
+		this.refresh()
 
+	}
+
+	refresh() {
+		axios.get(`${API_URL}?sort=-createdAt`)
+			.then(resp => this.setState({...this.state, description: '', list: resp.data}))
 	}
 
 	handleChange(e) {
@@ -24,7 +31,11 @@ export default class Todo extends Component{
 
 	handleAdd() {
 		const description = this.state.description
-		axios.post(API_URL, {description}).then(resp => console.log('Added new item!'))
+		axios.post(API_URL, {description}).then(resp => this.refresh())
+	}
+
+	handleRemove(todo){
+		axios.delete(`${API_URL}/${todo._id}`).then(resp => this.refresh())
 	}
 
 	render(){
@@ -36,7 +47,10 @@ export default class Todo extends Component{
 					handleChange={this.handleChange} 
 					handleAdd={this.handleAdd}
 				/>
-				<TodoList />
+				<TodoList 
+					list={this.state.list} 
+					handleRemove={this.handleRemove}
+				/>
 			</div>
 		)
 	}

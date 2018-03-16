@@ -1,7 +1,37 @@
 import React from 'react'
 
-export default props => (
-	<div>
-		<h1>List</h1>
-	</div>
-)
+import IconButton from '../template/iconButton'
+
+export default props => {
+
+    const renderRows = () => {
+        const list = props.list || []
+        return list.map(todo => (
+        	
+            <tr key={todo._id /*each array's element must have an unique key*/}>
+                <td>{todo.description}</td>
+                <td>
+                    <IconButton 
+                    	style='danger' 
+                    	icon='trash-o' 
+                    	onClick={() => props.handleRemove(todo)}>
+                    </IconButton>
+                </td>
+            </tr>
+        ))
+    }
+
+    return (
+        <table className='table'>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th className='tableActions'>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {renderRows()}
+            </tbody>
+        </table>
+    )
+}
