@@ -15,6 +15,7 @@ export default props => {
                     	style='success' 
                     	icon='check'
                     	hide={todo.done}
+                        title='Set task as done'
                     	onClick={
                     		() => props.handleMarkAsDone(todo) 
 	                    	/*when working with parameteres that are not events, arrow function is a must!*/
@@ -24,6 +25,7 @@ export default props => {
                     	style='warning' 
                     	icon='undo' 
                     	hide={!todo.done}
+                        title='Unset task as done'
                     	onClick={
                     		() => props.handleMarkAsPending(todo) 
 	                    	/*when working with parameteres that are not events, arrow function is a must!*/
@@ -33,6 +35,7 @@ export default props => {
                     	style='danger' 
                     	icon='trash-o' 
                     	hide={!todo.done}
+                        title='Delete task'
                     	onClick={
                     		() => props.handleRemove(todo) 
 	                    	/*when working with parameteres that are not events, arrow function is a must!*/
@@ -47,8 +50,8 @@ export default props => {
         <table className='table'>
             <thead>
                 <tr>
-                    <th>Descrição</th>
-                    <th className='tableActions'>Ações</th>
+                    <th>Description</th>
+                    <th className='tableActions'>Actions</th>
                 </tr>
             </thead>
             <tbody>

@@ -19,13 +19,13 @@ export default props => {
 					onKeyUp={keyHandler}
 					value={props.description}
 					className='form-control'
-					placeholder='Adicione uma tarefa'>
+					placeholder='Add new task'>
 				</input>
 			</Grid>
 			<Grid cols='12 3 2'>
-				<IconButton style='primary' icon='plus' onClick={props.handleAdd}></IconButton>
-				<IconButton style='info' icon='search' onClick={props.handleSearch}></IconButton>
-				<IconButton style='default' icon='close' onClick={props.handleClear}></IconButton>
+				<IconButton style='primary' icon='plus' title='Add task' onClick={props.handleAdd}></IconButton>
+				<IconButton style='info' icon='search' title='Search task' onClick={props.handleSearch}></IconButton>
+				<IconButton style='default' icon='close' title='Cancel Search' onClick={props.handleClear}></IconButton>
 			</Grid>
 		</div>
 	)
