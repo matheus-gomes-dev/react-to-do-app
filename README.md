@@ -12,9 +12,19 @@ mongod --port 27017 --dbpath database
 You will need to have [MongoDB installed in your machine](https://docs.mongodb.com/manual/installation/)
 
 
-Again inside the backend folder, run the following commands to start the nodeJS server:
+Still inside the backend folder, run the following commands to start the nodeJS server:
 
 ```
 npm install
 npm run dev
 ```
+
+
+Once backend and mongoDB are running, go back to the root app's folder and run:
+
+```
+npm install
+npm run dev
+```
+
+Now the application is ready and running on *http://localhost:8080*. Have fun! :)
