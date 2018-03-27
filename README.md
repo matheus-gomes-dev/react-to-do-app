@@ -1,2 +1,2 @@
 # To do app (react)
-Simple app to practice react, redux and webpack. 
+Simple app to practice react and webpack. 
