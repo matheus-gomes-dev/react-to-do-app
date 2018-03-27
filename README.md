@@ -1,5 +1,5 @@
 # To do app (react)
-Simple CRUD application to practice react and webpack. Create, read, update and delete tasks that you have to do!
+CRUD application to practice react and webpack. Create, read, update and delete tasks that you have to do!
 
 ![Alt Text](https://media.giphy.com/media/1k2wp8GXEhXFrqpmQj/giphy.gif)
 
