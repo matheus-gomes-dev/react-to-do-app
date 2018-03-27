@@ -4,7 +4,7 @@ Simple CRUD application to practice react and webpack. Create, read, update and 
 ![Alt Text](https://media.giphy.com/media/1k2wp8GXEhXFrqpmQj/giphy.gif)
 
 # Local Installation
-Clone this repository, then inside the backend folder, create a new folder called *database*. Then run:
+Clone this repository, then inside the backend folder, create a new folder called *database*. Run:
 
 ```
 mongod --port 27017 --dbpath database
