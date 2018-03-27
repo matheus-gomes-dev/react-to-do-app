@@ -1,5 +1,7 @@
 # To do app (react)
-Simple app to practice react and webpack. CRUD application to handle tasks: create, read, update and delete things that you have to do!
+Simple CRUD application to practice react and webpack. Create, read, update and delete tasks that you have to do!
+
+![Alt Text](https://media.giphy.com/media/1k2wp8GXEhXFrqpmQj/giphy.gif)
 
 # Local Installation
 Clone this repository, then inside the backend folder, create a new folder called *database*. Then run:
