@@ -29,4 +29,4 @@ npm install
 npm run dev
 ```
 
-Now the application is ready and running on *http://localhost:8080*. Have fun! :)
+That's it! Now the application is ready and running on *http://localhost:8080*. Have fun! :)
